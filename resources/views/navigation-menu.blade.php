@@ -9,11 +9,6 @@
                         <x-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
-                {{-- <div class="shrink-0 flex items-center">
-                    <a href="{{ route('usuarios.index') }}">
-                        <x-application-mark class="block h-9 w-auto" />
-                    </a>
-                </div> --}}
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
@@ -24,7 +19,7 @@
                         <i class="ri-group-3-fill"></i>   {{ __('Usuarios (CRUD)') }}
                     </x-nav-link> --}}
                     @if(auth()->user()->tipo == 1)
-                    <x-nav-link href="{{ route('usuarios.livewire') }}" :active="request()->routeIs('usuarios.livewire')">
+                    <x-nav-link href="{{ route('usuarios.index') }}" :active="request()->routeIs('usuarios.index')">
                         <i class="ri-group-3-fill"></i>   {{ __('Gestión de Usuarios') }}
                     </x-nav-link>
                     @endif
@@ -169,7 +164,7 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
             @if(auth()->user()->tipo == 1)
-            <x-responsive-nav-link href="{{ route('usuarios.livewire') }}" :active="request()->routeIs('usuarios.livewire')">
+            <x-responsive-nav-link href="{{ route('usuarios.index') }}" :active="request()->routeIs('usuarios.index')">
                 <i class="ri-group-3-fill"></i>   {{ __('Gestión de Usuarios') }}
             </x-responsive-nav-link>
             @endif

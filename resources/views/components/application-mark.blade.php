@@ -1,7 +1,7 @@
 @php
 $favicons = [];
 for ($i = 1; $i <= 24; $i++) {
-    $favicons[] = "img/{$i}.png";
+    $favicons[] = "/img/{$i}.png";
 }
 $randomFavicon = $favicons[array_rand($favicons)];
 @endphp
