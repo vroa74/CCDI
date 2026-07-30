@@ -9,9 +9,8 @@
 <script>
     function deviceDetector() {
         return {
-            deviceType: '{{ $deviceType }}',
-            scaleInfo: '',
-            
+deviceType: '{{ $deviceType ?? "desktop" }}',
+            scaleInfo: '',            
             init() {
                 this.detectDevice();
                 window.addEventListener('resize', () => this.detectDevice());

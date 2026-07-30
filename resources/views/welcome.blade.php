@@ -21,8 +21,11 @@
         <link rel="stylesheet" href="/build/assets/app.css">
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased" style="background: url('{{ $bgImage }}') no-repeat center center fixed; background-size: cover; min-height: 100vh;">
-        <div class="bg-gray-50 text-black/50" style="background: none;">
+    <body class="font-sans antialiased bg-gray-900" 
+    style="background: url('{{ $bgImage }}') no-repeat center center fixed; background-size: 
+    cover; min-height: 100vh;"
+    >
+        <div class="bg-gray-900 text-black/50" style="background: none;">
             {{-- <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" /> --}}
             {{-- <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white"> --}}
                 <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
@@ -31,7 +34,7 @@
                             @auth
                                 <a
                                     href="{{ url('/dashboard') }}"
-                                    class="bg-white text-gray-900 border border-gray-300 font-semibold rounded-lg px-6 py-2 shadow-md hover:bg-gray-100 transition cursor-pointer"
+                                    class="bg-gray-900 text-white border border-gray-500 font-semibold rounded-lg px-6 py-2 shadow-md hover:bg-gray-100 transition cursor-pointer"
                                 >
                                     {{ __('Dashboard') }}
                                 </a>
