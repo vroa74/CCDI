@@ -1,13 +1,17 @@
 <laravel-boost-guidelines>
-=== foundation rules ===
+=== reglas base ===
 
-# Laravel Boost Guidelines
+# Pruebas y archivos de pruebas
+Todos los archivos generados para las pruebas estaran ubicados en
+la carpeta /pruebas si execpcion.
 
-The Laravel Boost guidelines are specifically curated by Laravel maintainers for this application. These guidelines should be followed closely to ensure the best experience when building Laravel applications.
+# Guía de Laravel Boost
 
-## Foundational Context
+Las directrices de Laravel Boost están especialmente curadas por los mantenedores de Laravel para esta aplicación. Estas reglas deben seguirse de cerca para asegurar la mejor experiencia al construir aplicaciones Laravel.
 
-This application is a Laravel application and its main Laravel ecosystems package & versions are below. You are an expert with them all. Ensure you abide by these specific packages & versions.
+## Contexto fundamental
+
+Esta aplicación es un proyecto Laravel y los principales paquetes del ecosistema con sus versiones están listados a continuación. Eres un experto en todos ellos. Asegúrate de cumplir con estos paquetes y versiones específicos.
 
 - php - 8.3
 - laravel/fortify (FORTIFY) - v1
@@ -23,151 +27,151 @@ This application is a Laravel application and its main Laravel ecosystems packag
 - phpunit/phpunit (PHPUNIT) - v12
 - tailwindcss (TAILWINDCSS) - v3
 
-## Skills Activation
+## Activación de habilidades
 
-This project has domain-specific skills available in `**/skills/**`. You MUST activate the relevant skill whenever you work in that domain—don't wait until you're stuck.
+Este proyecto tiene habilidades específicas de dominio disponibles en `**/skills/**`. DEBES activar la habilidad relevante siempre que trabajes en ese dominio; no esperes hasta estar atascado.
 
-## Conventions
+## Convenciones
 
-- You must follow all existing code conventions used in this application. When creating or editing a file, check sibling files for the correct structure, approach, and naming.
-- Use descriptive names for variables and methods. For example, `isRegisteredForDiscounts`, not `discount()`.
-- Check for existing components to reuse before writing a new one.
+- Debes seguir todas las convenciones de código existentes usadas en esta aplicación. Al crear o editar un archivo, revisa archivos hermanos para la estructura, el enfoque y la nomenclatura correctos.
+- Usa nombres descriptivos para variables y métodos. Por ejemplo, `isRegisteredForDiscounts`, no `discount()`.
+- Revisa si ya existe un componente reutilizable antes de escribir uno nuevo.
 
-## Verification Scripts
+## Scripts de verificación
 
-- Do not create verification scripts or tinker when tests cover that functionality and prove they work. Unit and feature tests are more important.
+- No crees scripts de verificación ni uses tinker cuando las pruebas cubran esa funcionalidad y demuestren que funciona. Las pruebas unitarias y de características son más importantes.
 
-## Application Structure & Architecture
+## Estructura y arquitectura de la aplicación
 
-- Stick to existing directory structure; don't create new base folders without approval.
-- Do not change the application's dependencies without approval.
+- Mantente en la estructura de directorios existente; no crees nuevas carpetas base sin aprobación.
+- No cambies las dependencias de la aplicación sin aprobación.
 
-## Frontend Bundling
+## Empaquetado de frontend
 
-- If the user doesn't see a frontend change reflected in the UI, it could mean they need to run `npm run build`, `npm run dev`, or `composer run dev`. Ask them.
+- Si el usuario no ve un cambio de frontend reflejado en la interfaz, puede significar que necesita ejecutar `npm run build`, `npm run dev` o `composer run dev`. Pregúntale.
 
-## Documentation Files
+## Archivos de documentación
 
-- You must only create documentation files if explicitly requested by the user.
+- Solo debes crear archivos de documentación si el usuario lo solicita explícitamente.
 
-## Replies
+## Respuestas
 
-- Be concise in your explanations - focus on what's important rather than explaining obvious details.
+- Sé conciso en tus explicaciones: enfócate en lo importante en lugar de explicar detalles obvios.
 
-=== boost rules ===
+=== reglas boost ===
 
 # Laravel Boost
 
-## Tools
+## Herramientas
 
-- Laravel Boost is an MCP server with tools designed specifically for this application. Prefer Boost tools over manual alternatives like shell commands or file reads.
-- Use `database-query` to run read-only queries against the database instead of writing raw SQL in tinker.
-- Use `database-schema` to inspect table structure before writing migrations or models.
-- Use `get-absolute-url` to resolve the correct scheme, domain, and port for project URLs. Always use this before sharing a URL with the user.
-- Use `browser-logs` to read browser logs, errors, and exceptions. Only recent logs are useful, ignore old entries.
+- Laravel Boost es un servidor MCP con herramientas diseñadas específicamente para esta aplicación. Prefiere las herramientas de Boost sobre alternativas manuales como comandos de shell o lectura de archivos.
+- Usa `database-query` para ejecutar consultas de solo lectura en la base de datos en lugar de escribir SQL crudo en tinker.
+- Usa `database-schema` para inspeccionar la estructura de tablas antes de escribir migraciones o modelos.
+- Usa `get-absolute-url` para resolver el esquema, dominio y puerto correctos de las URLs del proyecto. Siempre úsalo antes de compartir una URL con el usuario.
+- Usa `browser-logs` para leer registros del navegador, errores y excepciones. Solo los registros recientes son útiles; ignora las entradas antiguas.
 
-## Searching Documentation (IMPORTANT)
+## Búsqueda de documentación (IMPORTANTE)
 
-- Always use `search-docs` before making code changes. Do not skip this step. It returns version-specific docs based on installed packages automatically.
-- Pass a `packages` array to scope results when you know which packages are relevant.
-- Use multiple broad, topic-based queries: `['rate limiting', 'routing rate limiting', 'routing']`. Expect the most relevant results first.
-- Do not add package names to queries because package info is already shared. Use `test resource table`, not `filament 4 test resource table`.
+- Siempre usa `search-docs` antes de hacer cambios en el código. No omitas este paso. Devuelve documentación específica de la versión basada en los paquetes instalados.
+- Pasa un arreglo `packages` para limitar los resultados cuando sepas qué paquetes son relevantes.
+- Usa múltiples consultas amplias basadas en temas: `['rate limiting', 'routing rate limiting', 'routing']`. Espera que los resultados más relevantes aparezcan primero.
+- No agregues nombres de paquetes a las consultas porque la información del paquete ya se comparte. Usa `test resource table`, no `filament 4 test resource table`.
 
-### Search Syntax
+### Sintaxis de búsqueda
 
-1. Use words for auto-stemmed AND logic: `rate limit` matches both "rate" AND "limit".
-2. Use `"quoted phrases"` for exact position matching: `"infinite scroll"` requires adjacent words in order.
-3. Combine words and phrases for mixed queries: `middleware "rate limit"`.
-4. Use multiple queries for OR logic: `queries=["authentication", "middleware"]`.
+1. Usa palabras para lógica AND automática: `rate limit` coincide con "rate" Y "limit".
+2. Usa `"frases entre comillas"` para coincidencias exactas de posición: `"infinite scroll"` requiere palabras adyacentes en ese orden.
+3. Combina palabras y frases para consultas mixtas: `middleware "rate limit"`.
+4. Usa múltiples consultas para lógica OR: `queries=["authentication", "middleware"]`.
 
 ## Artisan
 
-- Run Artisan commands directly via the command line (e.g., `php artisan route:list`). Use `php artisan list` to discover available commands and `php artisan [command] --help` to check parameters.
-- Inspect routes with `php artisan route:list`. Filter with: `--method=GET`, `--name=users`, `--path=api`, `--except-vendor`, `--only-vendor`.
-- Read configuration values using dot notation: `php artisan config:show app.name`, `php artisan config:show database.default`. Or read config files directly from the `config/` directory.
+- Ejecuta comandos Artisan directamente desde la línea de comandos (por ejemplo, `php artisan route:list`). Usa `php artisan list` para descubrir comandos disponibles y `php artisan [command] --help` para revisar parámetros.
+- Inspecciona rutas con `php artisan route:list`. Filtra con: `--method=GET`, `--name=users`, `--path=api`, `--except-vendor`, `--only-vendor`.
+- Lee valores de configuración usando notación de puntos: `php artisan config:show app.name`, `php artisan config:show database.default`. O lee archivos de configuración directamente en el directorio `config/`.
 
 ## Tinker
 
-- Execute PHP in app context for debugging and testing code. Do not create models without user approval, prefer tests with factories instead. Prefer existing Artisan commands over custom tinker code.
-- Always use single quotes to prevent shell expansion: `php artisan tinker --execute 'Your::code();'`
-  - Double quotes for PHP strings inside: `php artisan tinker --execute 'User::where("active", true)->count();'`
+- Ejecuta PHP en el contexto de la aplicación para depuración y pruebas. No crees modelos sin aprobación del usuario; prefiere pruebas con fábricas. Prefiere comandos Artisan existentes en lugar de código tinker personalizado.
+- Usa siempre comillas simples para evitar la expansión del shell: `php artisan tinker --execute 'Your::code();'`
+  - Usa comillas dobles dentro de las cadenas PHP: `php artisan tinker --execute 'User::where("active", true)->count();'`
 
-=== php rules ===
+=== reglas php ===
 
 # PHP
 
-- Always use curly braces for control structures, even for single-line bodies.
-- Use PHP 8 constructor property promotion: `public function __construct(public GitHub $github) { }`. Do not leave empty zero-parameter `__construct()` methods unless the constructor is private.
-- Use explicit return type declarations and type hints for all method parameters: `function isAccessible(User $user, ?string $path = null): bool`
-- Use TitleCase for Enum keys: `FavoritePerson`, `BestLake`, `Monthly`.
-- Prefer PHPDoc blocks over inline comments. Only add inline comments for exceptionally complex logic.
-- Use array shape type definitions in PHPDoc blocks.
+- Siempre usa llaves `{}` para estructuras de control, incluso en cuerpos de una sola línea.
+- Usa promoción de propiedades del constructor de PHP 8: `public function __construct(public GitHub $github) { }`. No dejes métodos `__construct()` vacíos sin parámetros a menos que el constructor sea privado.
+- Usa declaraciones de tipo de retorno explícitas y tipos en los parámetros de todos los métodos: `function isAccessible(User $user, ?string $path = null): bool`
+- Usa TitleCase para las claves de Enum: `FavoritePerson`, `BestLake`, `Monthly`.
+- Prefiere bloques PHPDoc sobre comentarios en línea. Solo agrega comentarios en línea para lógica excepcionalmente compleja.
+- Usa definiciones de forma de arreglo (`array shape`) en los PHPDoc.
 
-=== deployments rules ===
+=== reglas de despliegue ===
 
-# Deployment
+# Despliegue
 
-- Laravel can be deployed using [Laravel Cloud](https://cloud.laravel.com/), which is the fastest way to deploy and scale production Laravel applications.
+- Laravel se puede desplegar usando [Laravel Cloud](https://cloud.laravel.com/), que es la forma más rápida de desplegar y escalar aplicaciones Laravel.
 
-=== tests rules ===
+=== reglas de pruebas ===
 
-# Test Enforcement
+# Aplicación de pruebas
 
-- Every change must be programmatically tested. Write a new test or update an existing test, then run the affected tests to make sure they pass.
-- Run the minimum number of tests needed to ensure code quality and speed. Use `php artisan test --compact` with a specific filename or filter.
+- Cada cambio debe ser probado programáticamente. Crea una prueba nueva o actualiza una prueba existente, luego ejecuta las pruebas afectadas para asegurarte de que pasen.
+- Ejecuta la menor cantidad de pruebas necesaria para asegurar la calidad y la velocidad. Usa `php artisan test --compact` con un nombre de archivo o filtro específico.
 
-=== laravel/core rules ===
+=== reglas laravel/core ===
 
-# Do Things the Laravel Way
+# Haz las cosas a la manera de Laravel
 
-- Use `php artisan make:` commands to create new files (i.e. migrations, controllers, models, etc.). You can list available Artisan commands using `php artisan list` and check their parameters with `php artisan [command] --help`.
-- If you're creating a generic PHP class, use `php artisan make:class`.
-- Pass `--no-interaction` to all Artisan commands to ensure they work without user input. You should also pass the correct `--options` to ensure correct behavior.
+- Usa los comandos `php artisan make:` para crear nuevos archivos (por ejemplo, migraciones, controladores, modelos, jobs, etc.). Puedes listar los comandos disponibles con `php artisan list` y revisar los parámetros con `php artisan [command] --help`.
+- Si vas a crear una clase PHP genérica, usa `php artisan make:class`.
+- Pasa `--no-interaction` a todos los comandos Artisan para asegurarte de que no requieran entrada del usuario. También debes pasar las `--options` correctas para asegurar el comportamiento esperado.
 
-### Model Creation
+### Creación de modelos
 
-- When creating new models, create useful factories and seeders for them too. Ask the user if they need any other things, using `php artisan make:model --help` to check the available options.
+- Cuando crees nuevos modelos, crea factories y seeders útiles también. Pregunta al usuario si necesita algo más, usando `php artisan make:model --help`.
 
-## APIs & Eloquent Resources
+## APIs y recursos Eloquent
 
-- For APIs, default to using Eloquent API Resources and API versioning unless existing API routes do not, then you should follow existing application convention.
+- Para APIs, usa por defecto recursos Eloquent API y versionado de API a menos que las rutas existentes no lo hagan; en ese caso, sigue la convención actual de la aplicación.
 
-## URL Generation
+## Generación de URL
 
-- When generating links to other pages, prefer named routes and the `route()` function.
+- Al generar enlaces a otras páginas, prefiere rutas con nombre y la función `route()`.
 
-## Testing
+## Pruebas
 
-- When creating models for tests, use the factories for the models. Check if the factory has custom states that can be used before manually setting up the model.
-- Faker: Use methods such as `$this->faker->word()` or `fake()->randomDigit()`. Follow existing conventions whether to use `$this->faker` or `fake()`.
-- When creating tests, make use of `php artisan make:test [options] {name}` to create a feature test, and pass `--unit` to create a unit test. Most tests should be feature tests.
+- Al crear modelos para pruebas, usa las factories. Revisa si la factory tiene estados personalizados antes de configurar manualmente el modelo.
+- Faker: usa métodos como `$this->faker->word()` o `fake()->randomDigit()`. Sigue las convenciones existentes respecto a si usas `$this->faker` o `fake()`.
+- Al crear pruebas, usa `php artisan make:test [options] {name}` para una prueba de características y pasa `--unit` para una prueba unitaria. La mayoría de las pruebas deben ser de características.
 
-## Vite Error
+## Error de Vite
 
-- If you receive an "Illuminate\Foundation\ViteException: Unable to locate file in Vite manifest" error, you can run `npm run build` or ask the user to run `npm run dev` or `composer run dev`.
+- Si recibes un error `Illuminate\Foundation\ViteException: Unable to locate file in Vite manifest`, puedes ejecutar `npm run build` o preguntar al usuario que ejecute `npm run dev` o `composer run dev`.
 
-=== livewire/core rules ===
+=== reglas livewire/core ===
 
 # Livewire
 
-- Livewire allow to build dynamic, reactive interfaces in PHP without writing JavaScript.
-- You can use Alpine.js for client-side interactions instead of JavaScript frameworks.
-- Keep state server-side so the UI reflects it. Validate and authorize in actions as you would in HTTP requests.
+- Livewire permite construir interfaces dinámicas y reactivas en PHP sin escribir JavaScript.
+- Puedes usar Alpine.js para interacciones del lado del cliente en lugar de frameworks JavaScript.
+- Mantén el estado en el servidor para que la interfaz refleje los datos. Valida y autoriza en las acciones como lo harías en solicitudes HTTP.
 
-=== pint/core rules ===
+=== reglas pint/core ===
 
-# Laravel Pint Code Formatter
+# Formateador Laravel Pint
 
-- If you have modified any PHP files, you must run `vendor/bin/pint --dirty --format agent` before finalizing changes to ensure your code matches the project's expected style.
-- Do not run `vendor/bin/pint --test --format agent`, simply run `vendor/bin/pint --format agent` to fix any formatting issues.
+- Si has modificado archivos PHP, debes ejecutar `vendor/bin/pint --dirty --format agent` antes de finalizar los cambios para asegurar que tu código coincida con el estilo del proyecto.
+- No ejecutes `vendor/bin/pint --test --format agent`; simplemente ejecuta `vendor/bin/pint --format agent` para corregir problemas de formato.
 
-=== pest/core rules ===
+=== reglas pest/core ===
 
 ## Pest
 
-- This project uses Pest for testing. Create tests: `php artisan make:test --pest {name}`.
-- The `{name}` argument should not include the test suite directory. Use `php artisan make:test --pest SomeFeatureTest` instead of `php artisan make:test --pest Feature/SomeFeatureTest`.
-- Run tests: `php artisan test --compact` or filter: `php artisan test --compact --filter=testName`.
-- Do NOT delete tests without approval.
+- Este proyecto usa Pest para pruebas. Crea pruebas con `php artisan make:test --pest {name}`.
+- El argumento `{name}` no debe incluir el directorio de la suite de pruebas. Usa `php artisan make:test --pest SomeFeatureTest` en lugar de `php artisan make:test --pest Feature/SomeFeatureTest`.
+- Ejecuta pruebas con `php artisan test --compact` o con el filtro `php artisan test --compact --filter=testName`.
+- NO elimines pruebas sin aprobación.
 
 </laravel-boost-guidelines>

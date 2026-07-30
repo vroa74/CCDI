@@ -1110,9 +1110,6 @@
         </div>
     @endif
 
-    @livewireStyles
-    @livewireScripts
-
     <style>
         /* Estilos para el grid de fotos responsive */
         .photos-grid {

@@ -42,7 +42,6 @@
 
         <!-- Styles -->
         @livewireStyles
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
     </head>
     <body class="font-sans antialiased bg-gray-900 text-gray-100">
         <x-banner />
@@ -73,13 +72,10 @@
         @stack('modals')
         
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        {{-- <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> --}}
         @livewireScripts
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/notie/4.3.1/notie.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-        <script type="module"> import lucide from 'https://cdn.jsdelivr.net/npm/lucide@0.525.0/+esm' </script>
         
         <!-- Script para SweetAlert -->
         <script>
