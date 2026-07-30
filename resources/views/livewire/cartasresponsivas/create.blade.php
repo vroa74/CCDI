@@ -17,7 +17,7 @@
                 @endif
                 <form wire:submit.prevent="save" class="space-y-4">
                     <div>
-                        <label class="block text-gray-200 mb-1">Usuario que genera</label>
+                        <label class="block text-gray-200 mb-1">Usuario que genera la carta</label>
                         <select wire:model="user_id" class="w-full rounded p-2 bg-gray-900 text-gray-100">
                             <option value="">Seleccione...</option>
                             <option value="null">Sin usuario</option>
@@ -72,12 +72,12 @@
         <div class="w-[37%]">
             <div class="p-6 bg-gray-800 rounded-lg shadow h-full overflow-y-auto">
                 <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-gray-200 text-lg font-medium">Inv. de la Carta Responsiva</h3>
+                    <h3 class="text-gray-200 text-lg font-medium">Inventario de la carta responsiva</h3>
                     <button 
                         wire:click="openInventoryModal"
                         class="px-3 py-1 bg-green-600 hover:bg-green-700 text-white text-sm rounded transition-colors"
                     >
-                        + Agregar Item
+                        + Agregar elemento
                     </button>
                 </div>
                 
@@ -152,7 +152,7 @@
                         <div class="p-8 text-center text-gray-400">
                             <div class="text-4xl mb-2">📋</div>
                             <p class="text-sm">No hay inventarios seleccionados</p>
-                            <p class="text-xs mt-1">Haz clic en "Agregar Item" para comenzar</p>
+                            <p class="text-xs mt-1">Haz clic en "Agregar elemento" para comenzar</p>
                         </div>
                     @endif
                 </div>
@@ -165,7 +165,7 @@
                 <div class="bg-gray-800 rounded-lg shadow-xl w-full max-w-6xl max-h-[90vh] flex flex-col">
                     <div class="p-6 border-b border-gray-700 flex-shrink-0">
                         <div class="flex justify-between items-center">
-                            <h3 class="text-gray-200 text-lg font-medium">Seleccionar Inventario</h3>
+                            <h3 class="text-gray-200 text-lg font-medium">Seleccionar inventario</h3>
                             <button 
                                 wire:click="closeInventoryModal"
                                 class="text-gray-400 hover:text-white transition-colors"
@@ -251,7 +251,7 @@
         <!-- Tercera columna - Acordeón de fotos (Flowbite) (33%) -->
         <div class="w-[33%]">
             <div class="p-6 bg-gray-800 rounded-lg shadow h-full overflow-y-auto">
-                <h3 class="text-gray-200 text-lg font-medium mb-4">Fotos de Inventarios</h3>
+                <h3 class="text-gray-200 text-lg font-medium mb-4">Fotos de inventarios</h3>
                 <div class="border border-gray-700 rounded-xl bg-gray-800">
                     <div id="accordion-inventarios" data-accordion="collapse" class="w-full text-center">
                         @foreach($openPhotoAccordion as $invId => $open)

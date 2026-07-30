@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class="h-14 bg-gray-900 border-2 border-yellow-400 rounded-3xl flex flex-col items-center justify-center gap-1 px-2">
-                    <div class="text-yellow-300 font-medium text-sm mb-0.5">Registros por Página</div>
+                    <div class="text-yellow-300 font-medium text-sm mb-0.5">Registros por página</div>
                     <select wire:model.live="perPage"
                         class="w-11/12 px-2 py-1 bg-gray-800 border border-yellow-400 rounded-lg text-yellow-200 focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-sm">
                         <option value="5">5 por página</option>
@@ -80,7 +80,7 @@
                     </select>
                 </div>
                 <div class="h-18 bg-gray-900 border-2 border-pink-400 rounded-3xl flex flex-col items-center justify-center gap-1 px-2">
-                    <div class="text-pink-300 font-medium text-sm mb-0.5">Tipo de Servicio</div>
+                    <div class="text-pink-300 font-medium text-sm mb-0.5">Tipo de servicio</div>
                     <div class="grid grid-cols-3 gap-1 w-full">
                         <label class="flex items-center text-xs text-pink-200">
                             <input type="checkbox" wire:model.live="filterCorrectivo" class="mr-1">
@@ -109,15 +109,15 @@
                     </div>
                 </div>
                 <div class="h-18 bg-gray-900 border-2 border-cyan-400 rounded-3xl flex flex-col items-center justify-center gap-1 px-2">
-                    <div class="text-cyan-300 font-medium text-sm mb-0.5">Vía de Solicitud</div>
+                    <div class="text-cyan-300 font-medium text-sm mb-0.5">Vía de solicitud</div>
                     <div class="grid grid-cols-3 gap-1 w-full">
                         <label class="flex items-center text-xs text-cyan-200">
                             <input type="checkbox" wire:model.live="filterEmail" class="mr-1">
-                            Email
+                            Correo
                         </label>
                         <label class="flex items-center text-xs text-cyan-200">
                             <input type="checkbox" wire:model.live="filterTelefono" class="mr-1">
-                            Teléfono..
+                            Teléfono
                         </label>
                         <label class="flex items-center text-xs text-cyan-200">
                             <input type="checkbox" wire:model.live="filterSolicitudServicio" class="mr-1">
@@ -138,7 +138,7 @@
                         {{ $services->total() }}
                     </div>
                     <span class="text-xs text-yellow-200 font-normal text-center">
-                        Total de Servicios
+                        Total de servicios
                     </span>
                     <div class="flex gap-1 w-full">
                         <a href="{{ route('servicios.create') }}"
@@ -181,16 +181,16 @@
                             ID Servicio
                         </th>
                         <th class="px-3 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider w-[10%]">
-                            Fecha de Servicio
+                            Fecha de servicio
                         </th>
                         <th class="px-3 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider w-[22%]">
                             Involucrados
                         </th>
                         <th class="px-3 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider w-[12%]">
-                            Objetivo de la Solicitud
+                            Objetivo de la solicitud
                         </th>
                         <th class="px-3 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider w-[12%]">
-                            Actividades Realizadas
+                            Actividades realizadas
                         </th>
                         <th class="px-3 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider w-[12%]">
                             Observaciones
@@ -425,7 +425,7 @@
         <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div class="bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg font-medium text-white">Generar Reporte</h3>
+                    <h3 class="text-lg font-medium text-white">Generar reporte</h3>
                     <button wire:click="closeReportModal" class="text-gray-400 hover:text-white">
                         <x-lucide name="x" class="w-6 h-6" />
                     </button>
@@ -434,7 +434,7 @@
                 <form wire:submit.prevent="generateReport" class="space-y-4">
                     <!-- Tipo de Reporte -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-2">Tipo de Reporte</label>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Tipo de reporte</label>
                         <select wire:model.defer="reportType" wire:blur="$refresh" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             <option value="general">Reporte General</option>
                             <option value="por_usuario">Por Usuario</option>
@@ -457,7 +457,7 @@
 
                     <!-- Filtro por Usuario -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-2">Usuario (Opcional)</label>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Usuario (opcional)</label>
                         <select wire:model.defer="reportUser" wire:blur="$refresh" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             <option value="">Todos los usuarios</option>
                             @foreach($users as $user)
@@ -468,7 +468,7 @@
 
                     <!-- Filtro por Estado -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-2">Estado (Opcional)</label>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Estado (opcional)</label>
                         <select wire:model.defer="reportStatus" wire:blur="$refresh" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             <option value="">Todos los estados</option>
                             <option value="1">Activo</option>

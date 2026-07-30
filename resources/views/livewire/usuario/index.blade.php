@@ -50,7 +50,7 @@
                 class="w-full sm:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center gap-2 transition-colors text-base mobile-touch-target"
             >
                 <x-lucide name="plus" class="w-5 h-5" />
-                <span class="hidden sm:inline">Agregar Usuario</span>
+                <span class="hidden sm:inline">Agregar usuario</span>
                 <span class="sm:hidden">Agregar</span>
             </button>
         </div>
@@ -394,7 +394,7 @@
                 <div class="p-6 border-b border-gray-700">
                     <div class="flex items-center justify-between">
                         <h3 class="text-lg font-medium text-white">
-                            {{ $editing ? 'Editar Usuario' : 'Nuevo Usuario' }}
+                            {{ $editing ? 'Editar usuario' : 'Nuevo usuario' }}
                         </h3>
                         <button 
                             wire:click="closeModal"
@@ -411,7 +411,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-300 mb-2">
-                                Nombre Completo *
+                                Nombre completo *
                             </label>
                             <input 
                                 wire:model="name"
@@ -425,7 +425,7 @@
 
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
-                                Email *
+                                Correo electrónico *
                             </label>
                             <input 
                                 wire:model="email"
@@ -570,7 +570,7 @@
 
                         <div>
                             <label for="tipo" class="block text-sm font-medium text-gray-300 mb-2">
-                                Tipo de Usuario
+                                Tipo de usuario
                             </label>
                             <select 
                                 wire:model="tipo"
@@ -586,7 +586,7 @@
 
                         <div x-data="{photoName: null, photoPreview: null}">
                             <label for="photo" class="block text-sm font-medium text-gray-300 mb-2">
-                                Foto de Perfil
+                                Foto de perfil
                             </label>
                             
                             <!-- Input de archivo oculto -->

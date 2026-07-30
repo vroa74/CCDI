@@ -2,14 +2,14 @@
     <!-- Header con título y botón de crear -->
     <div class="mb-6 flex justify-between items-center">
         <div>
-            <h1 class="text-2xl font-bold text-white">Gestión de Cartas Responsivas</h1>
+            <h1 class="text-2xl font-bold text-white">Gestión de cartas responsivas</h1>
             <p class="text-gray-400 mt-1">Administra las cartas responsivas del sistema</p>
         </div>
         <a href="{{ route('cartasresponsivas.create') }}" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center gap-2">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
             </svg>
-            Crear Carta Responsiva
+            Crear carta responsiva
         </a>
     </div>
 
@@ -39,7 +39,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <!-- Búsqueda general -->
             <div>
-                <label class="block text-sm font-medium text-gray-300 mb-2">Búsqueda General</label>
+                <label class="block text-sm font-medium text-gray-300 mb-2">Búsqueda general</label>
                 <div class="relative">
                     <input 
                         wire:model.live="search" 
@@ -97,7 +97,7 @@
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
-                Limpiar Filtros
+                Limpiar filtros
         </button>
         </div>
     </div>

@@ -171,7 +171,7 @@
             <div class="bg-gray-800 rounded-t-lg sm:rounded-lg w-full max-w-md max-h-[90vh] overflow-y-auto">
                 <div class="p-4 border-b border-gray-700">
                     <div class="flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-white">📊 Generar Reporte</h3>
+                        <h3 class="text-lg font-semibold text-white">📊 Generar reporte</h3>
                         <button wire:click="closeReportModal" class="text-gray-400 hover:text-white">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -182,7 +182,7 @@
                 
                 <div class="p-4 space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-300 mb-2">Tipo de Reporte</label>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Tipo de reporte</label>
                         <select wire:model="reportType" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white">
                             <option value="general">General</option>
                             <option value="user">Por Usuario</option>

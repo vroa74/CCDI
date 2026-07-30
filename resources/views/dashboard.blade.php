@@ -12,8 +12,8 @@
                     <h3 class="text-lg font-bold text-white flex items-center gap-2">
                         <span>📱</span> Detección de Dispositivo y Pantalla
                     </h3>
-                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-900/50 text-blue-300 border border-blue-700">
-                        Tiempo Real (JS)
+                    <span class="inlin  -center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-900/50 text-blue-300 border border-blue-700">
+                        Tiempo real (JS)
                     </span>
                 </div>
 
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="bg-gray-900/40 p-4 rounded-lg border text-center border-gray-700/50 text-xs font-mono text-gray-400 break-all">
-                    <span class="font-bold text-gray-300">User Agent:</span>
+                    <span class="font-bold text-gray-300">Agente de usuario:</span>
                     <span x-text="userAgent"></span>
                 </div>
             </div>

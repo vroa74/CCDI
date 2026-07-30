@@ -9,7 +9,7 @@
                 <div class="p-1 border-b border-gray-700">
                     <div class="flex items-center justify-between">
                         <h3 class="text-lg font-medium text-white">
-                            Nuevo Servicio
+                            Nuevo servicio
                         </h3>
                         <a href="{{ route('servicios.index') }}" class="text-gray-400 hover:text-white transition-colors">
                             <x-lucide name="x" class="w-6 h-6" />
@@ -22,7 +22,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label for="id_s" class="block text-sm font-medium text-gray-300 mb-2">
-                                ID Servicio
+                                ID del servicio
                             </label>
                             <input wire:model="id_s" type="text" id="id_s" readonly
                                 class="w-full px-3 py-2 bg-gray-600 border border-gray-600 rounded-lg text-white placeholder-gray-400 cursor-not-allowed"
@@ -33,7 +33,7 @@
                         </div>
                         <div>
                             <label for="F_serv" class="block text-sm font-medium text-gray-300 mb-2">
-                                Fecha de Servicio
+                                Fecha de servicio
                             </label>
                             <input wire:model="F_serv" type="date" id="F_serv" readonly
                                 class="w-full px-3 py-2 bg-gray-600 border border-gray-600 rounded-lg text-white cursor-not-allowed">
@@ -47,7 +47,7 @@
                     <div>
                         <div class="flex items-center gap-2 mb-2">
                             <label for="obj_sol" class="block text-sm font-medium text-gray-300">
-                                Objetivo de la Solicitud
+                                Objetivo de la solicitud
                             </label>
                             <button type="button" wire:click="openUserModal('objetivo', 'null', 'null', null, 'null')"
                                 class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg transition-colors flex items-center gap-1">
@@ -78,7 +78,7 @@
                         <div>
                             <div class="flex items-center gap-2 mb-2">
                                 <label for="actividades" class="block text-sm font-medium text-gray-300 mb-2">
-                                    Actividades Realizadas
+                                    Actividades realizadas
                                 </label>
                                 <button type="button"
                                     wire:click="openUserModal('actividades', 'null', 'null', null, 'null')"
@@ -128,7 +128,7 @@
                         <!-- Tipo de servicio -->
                         <div>
                             <label class="block text-sm font-medium text-gray-300 mb-3">
-                                Tipo de Servicio
+                                Tipo de servicio
                             </label>
                             <div class="flex flex-wrap gap-3 items-center">
                                 <label class="flex items-center">
@@ -159,7 +159,7 @@
                                 <label class="flex items-center">
                                     <input wire:model="print" type="checkbox"
                                         class="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2">
-                                    <span class="ml-2 text-sm text-gray-300">Print</span>
+                                    <span class="ml-2 text-sm text-gray-300">Impresión</span>
                                 </label>
                             </div>
                             @error('tipo_servicio')
@@ -170,13 +170,13 @@
                         <!-- Via de solicitud -->
                         <div>
                             <label class="block text-sm font-medium text-gray-300 mb-3">
-                                Via de Solicitud
+                                Vía de solicitud
                             </label>
                             <div class="flex flex-wrap gap-3 items-center">
                                 <label class="flex items-center">
                                     <input wire:model="email" type="checkbox"
                                         class="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2">
-                                    <span class="ml-2 text-sm text-gray-300">Email</span>
+                                    <span class="ml-2 text-sm text-gray-300">Correo</span>
                                 </label>
                                 <label class="flex items-center">
                                     <input wire:model="tel" type="checkbox"
@@ -234,7 +234,7 @@
                     <!-- Usuarios involucrados -->
                     <div>
                         <label class="block text-sm font-medium text-gray-300 mb-3">
-                            Usuarios Involucrados
+                            Usuarios involucrados
                         </label>
                         <!-- Tabla de 3 columnas para Solicitante, Efectuó y VºBº -->
                         <div class="w-full flex gap-2 mb-6">

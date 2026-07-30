@@ -40,30 +40,30 @@
                         </div>
                         <div>
                             <label class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2">
-                                Buscar por TYPE
+                                Buscar por tipo
                             </label>
-                            <input wire:model.live="inventorySearchType" type="text" placeholder="TYPE..."
+                            <input wire:model.live="inventorySearchType" type="text" placeholder="Tipo..."
                                 class="w-full px-2 sm:px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
                         </div>
                         <div>
                             <label class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2">
-                                Buscar por ARTICULO
+                                Buscar por artículo
                             </label>
-                            <input wire:model.live="inventorySearchArticulo" type="text" placeholder="ARTICULO..."
+                            <input wire:model.live="inventorySearchArticulo" type="text" placeholder="Artículo..."
                                 class="w-full px-2 sm:px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
                         </div>
                         <div>
                             <label class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2">
-                                Buscar por Nombre Usuario
+                                Buscar por nombre de usuario
                             </label>
-                            <input wire:model.live="inventorySearchUserName" type="text" placeholder="Nombre usuario..."
+                            <input wire:model.live="inventorySearchUserName" type="text" placeholder="Nombre de usuario..."
                                 class="w-full px-2 sm:px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
                         </div>
                         <div>
                             <label class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2">
-                                Buscar por Dirección Usuario
+                                Buscar por dirección de usuario
                             </label>
-                            <input wire:model.live="inventorySearchUserDirection" type="text" placeholder="Dirección usuario..."
+                            <input wire:model.live="inventorySearchUserDirection" type="text" placeholder="Dirección de usuario..."
                                 class="w-full px-2 sm:px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
                         </div>
                     </div>
@@ -102,8 +102,8 @@
                                             </div>
                                             <!-- Información adicional visible en móvil -->
                                             <div class="sm:hidden text-xs text-gray-400 mt-2">
-                                                <div><strong>TYPE:</strong> {{ $inv->type ?? 'N/A' }}</div>
-                                                <div><strong>ARTICULO:</strong> {{ $inv->articulo ?? 'N/A' }}</div>
+                                                <div><strong>TIPO:</strong> {{ $inv->type ?? 'N/A' }}</div>
+                                                <div><strong>ARTÍCULO:</strong> {{ $inv->articulo ?? 'N/A' }}</div>
                                             </div>
                                         </td>
                                         <td class="px-2 sm:px-4 py-3 sm:py-4 whitespace-nowrap text-xs text-gray-300 hidden sm:table-cell">

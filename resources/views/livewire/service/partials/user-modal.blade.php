@@ -5,7 +5,7 @@
             <div class="p-4 sm:p-6 border-b border-gray-700">
                 <div class="flex items-center justify-between">
                     <h3 class="text-base sm:text-lg font-medium text-white">
-                        Selección de Usuario
+                        Selección de usuario
                         <div class="text-xs text-gray-400 font-normal mt-1">
                             {{ $modalType ?? '' }},
                             {{ $modalParam1 ?? '' }},
@@ -24,28 +24,28 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                         <div>
                             <label class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2">
-                                Buscar por Nombre
+                                Buscar por nombre
                             </label>
                             <input wire:model.live="userSearchName" type="text" placeholder="Nombre..."
                                 class="w-full px-2 sm:px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
                         </div>
                         <div>
                             <label class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2">
-                                Buscar por Posición
+                                Buscar por posición
                             </label>
                             <input wire:model.live="userSearchPosition" type="text" placeholder="Posición..."
                                 class="w-full px-2 sm:px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
                         </div>
                         <div>
                             <label class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2">
-                                Buscar por Dirección
+                                Buscar por dirección
                             </label>
                             <input wire:model.live="userSearchDirection" type="text" placeholder="Dirección..."
                                 class="w-full px-2 sm:px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
                         </div>
                         <div>
                             <label class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2">
-                                Buscar por Nivel
+                                Buscar por nivel
                             </label>
                             <input wire:model.live="userSearchLvl" type="text" placeholder="Nivel..."
                                 class="w-full px-2 sm:px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">

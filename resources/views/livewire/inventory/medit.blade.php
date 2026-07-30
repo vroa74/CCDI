@@ -37,7 +37,7 @@
         <div x-data="{ open: true }" class="bg-gray-800 rounded-lg border border-gray-700">
             <button @click="open = !open" type="button"
                 class="w-full flex items-center justify-between p-3 bg-gray-700 text-white rounded-t-lg">
-                <span class="font-semibold text-sm">📅 Información Básica</span>
+                <span class="font-semibold text-sm">📅 Información básica</span>
                 <svg :class="{ 'rotate-180': open }" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -46,7 +46,7 @@
             <div x-show="open" x-transition class="p-3 space-y-3">
                 <div class="grid grid-cols-2 gap-2">
                     <div>
-                        <label class="block text-xs font-medium text-gray-300 mb-1">Fecha Inventario</label>
+                        <label class="block text-xs font-medium text-gray-300 mb-1">Fecha de inventario</label>
                         <input wire:model="fecha_inv" type="date" 
                             class="w-full px-2 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm">
                         @error('fecha_inv')
@@ -64,7 +64,7 @@
                 </div>
                 
                 <div>
-                    <label class="block text-xs font-medium text-gray-300 mb-1">Dirección/Ubicación</label>
+                    <label class="block text-xs font-medium text-gray-300 mb-1">Dirección o ubicación</label>
                     <input wire:model="dir" type="text" placeholder="Dirección o ubicación"
                         class="w-full px-2 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm placeholder-gray-400">
                     @error('dir')
@@ -78,7 +78,7 @@
         <div x-data="{ open: false }" class="bg-gray-800 rounded-lg border border-gray-700">
             <button @click="open = !open" type="button"
                 class="w-full flex items-center justify-between p-3 bg-gray-700 text-white rounded-t-lg">
-                <span class="font-semibold text-sm">👥 Usuarios y Responsables</span>
+                <span class="font-semibold text-sm">👥 Usuarios y responsables</span>
                 <svg :class="{ 'rotate-180': open }" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -132,7 +132,7 @@
         <div x-data="{ open: false }" class="bg-gray-800 rounded-lg border border-gray-700">
             <button @click="open = !open" type="button"
                 class="w-full flex items-center justify-between p-3 bg-gray-700 text-white rounded-t-lg">
-                <span class="font-semibold text-sm">📦 Información del Artículo</span>
+                <span class="font-semibold text-sm">📦 Información del artículo</span>
                 <svg :class="{ 'rotate-180': open }" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -149,7 +149,7 @@
                         @enderror
                     </div>
                     <div>
-                        <label class="block text-xs font-medium text-gray-300 mb-1">Número de Inventario</label>
+                        <label class="block text-xs font-medium text-gray-300 mb-1">Número de inventario</label>
                         <input wire:model="ni" type="text" placeholder="NI"
                             class="w-full px-2 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm placeholder-gray-400">
                         @error('ni')
@@ -179,7 +179,7 @@
                 
                 <div class="grid grid-cols-2 gap-2">
                     <div>
-                        <label class="block text-xs font-medium text-gray-300 mb-1">Número de Serie</label>
+                        <label class="block text-xs font-medium text-gray-300 mb-1">Número de serie</label>
                         <input wire:model="ns" type="text" placeholder="NS"
                             class="w-full px-2 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm placeholder-gray-400">
                         @error('ns')
@@ -207,7 +207,7 @@
         <div x-data="{ open: false }" class="bg-gray-800 rounded-lg border border-gray-700">
             <button @click="open = !open" type="button"
                 class="w-full flex items-center justify-between p-3 bg-gray-700 text-white rounded-t-lg">
-                <span class="font-semibold text-sm">📋 Información Adicional</span>
+                <span class="font-semibold text-sm">📋 Información adicional</span>
                 <svg :class="{ 'rotate-180': open }" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
