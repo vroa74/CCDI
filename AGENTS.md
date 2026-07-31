@@ -34,9 +34,23 @@ Este proyecto tiene habilidades específicas de dominio disponibles en `**/skill
 ## Convenciones
 
 - Debes seguir todas las convenciones de código existentes usadas en esta aplicación. Al crear o editar un archivo, revisa archivos hermanos para la estructura, el enfoque y la nomenclatura correctos.
+- Todas las rutas, adiciones, anexiones y modificaciones deben seguir la guía de estilo observada en el proyecto.
 - Usa nombres descriptivos para variables y métodos. Por ejemplo, `isRegisteredForDiscounts`, no `discount()`.
 - Revisa si ya existe un componente reutilizable antes de escribir uno nuevo.
 - Cuando se solicite una modificación de una ruta o de una acción específica, realiza únicamente esa acción solicitada y verifica que no repercuta en las demás acciones de esa misma ruta ni en ninguna otra ruta.
+- Todas las vistas deben estar escritas en español.
+
+## Guía de estilo del proyecto
+
+- Idioma: todo texto visible en interfaz (títulos, etiquetas, mensajes, botones, validaciones y ayudas) debe estar en español.
+- Rutas: usa rutas con nombre y `route()` para generar enlaces; conserva la convención actual de recursos y alias de nombres existentes.
+- Controladores: mantén clases en `App\Http\Controllers` con sufijo `Controller` y nombres en PascalCase.
+- Livewire: organiza componentes por dominio y acción (por ejemplo `App\Livewire\Service\Index`), con propiedades en camelCase y bindings `wire:model.live` cuando se requiera filtrado en tiempo real.
+- Modelos y base de datos: respeta los nombres de columnas heredadas existentes (incluyendo `snake_case` y campos legacy como `id_s`, `F_serv`), sin renombrar campos salvo solicitud explícita.
+- Blade: prioriza componentes reutilizables (`x-...`) antes de duplicar bloques; conserva estructuras existentes de layout y slots.
+- Estilos: usa Tailwind CSS como primera opción, manteniendo coherencia visual con la paleta y patrones ya presentes en cada módulo.
+- Mensajes de sesión: conserva claves estándar observadas (`message`, `error`) y textos claros en español.
+- Comentarios: usa comentarios breves y útiles, preferentemente en español, solo cuando aporten contexto no obvio.
 
 ## Scripts de verificación
 
