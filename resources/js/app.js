@@ -1,14 +1,10 @@
-import Alpine from 'alpinejs';
 import { initFlowbite } from 'flowbite';
-import { createIcons } from 'lucide';
-
-window.Alpine = Alpine;
-
-Alpine.start();
+import { createIcons, icons } from 'lucide';
 
 window.addEventListener('DOMContentLoaded', () => {
     initFlowbite();
     createIcons({
+        icons,
         attrs: {
             class: 'inline-block',
         },

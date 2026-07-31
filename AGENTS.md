@@ -36,6 +36,7 @@ Este proyecto tiene habilidades específicas de dominio disponibles en `**/skill
 - Debes seguir todas las convenciones de código existentes usadas en esta aplicación. Al crear o editar un archivo, revisa archivos hermanos para la estructura, el enfoque y la nomenclatura correctos.
 - Usa nombres descriptivos para variables y métodos. Por ejemplo, `isRegisteredForDiscounts`, no `discount()`.
 - Revisa si ya existe un componente reutilizable antes de escribir uno nuevo.
+- Cuando se solicite una modificación de una ruta o de una acción específica, realiza únicamente esa acción solicitada y verifica que no repercuta en las demás acciones de esa misma ruta ni en ninguna otra ruta.
 
 ## Scripts de verificación
 
